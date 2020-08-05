@@ -1,0 +1,16 @@
+version: "3.4"
+
+services:
+  client:
+    image: shortpoet/vite
+    build:
+      context: .
+      dockerfile: Dockerfile
+    tty: true
+    stdin_open: true
+    working_dir: /usr/src/app
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/usr/src/app
+    command: yarn vite
