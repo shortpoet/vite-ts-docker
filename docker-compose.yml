@@ -12,5 +12,5 @@ services:
     ports:
       - 3000:3000
     volumes:
-      - .:/usr/src/app
+      - ${PWD}:/usr/src/app
     command: yarn vite
